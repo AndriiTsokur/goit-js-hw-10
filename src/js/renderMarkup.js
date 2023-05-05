@@ -21,9 +21,9 @@ function renderCountriesList(apiData) {
 	const countriesBundle = apiData
 		.map(country => {
 			return `<li class="country-item">
-						<img class="flag" src="${country.flags.svg}" alt="${country.flags.alt}">
-							${country.name.official}
-					</li>`;
+					<img class="flag" src="${country.flags.svg}" alt="${country.flags.alt}">
+					${country.name.official}
+				</li>`;
 		})
 		.join('');
 
@@ -32,8 +32,8 @@ function renderCountriesList(apiData) {
 
 function renderCountryInfo(apiData) {
 	return (refs.countryInfo.innerHTML = `<div class="country-info__head">
-		<img class="flag" src="${apiData[0].flags.svg}" alt="${apiData[0].flags.alt}">
-		<h1 class="country-info__title">${apiData[0].name.official}</h1>
+			<img class="flag" src="${apiData[0].flags.svg}" alt="${apiData[0].flags.alt}">
+			<h1 class="country-info__title">${apiData[0].name.official}</h1>
 		</div>
 		<p class="country-info__text">
 			<span class="country-info__bold">Capital: </span>
